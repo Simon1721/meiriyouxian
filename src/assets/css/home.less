@@ -1,0 +1,41 @@
+.home{
+    .menu-list{
+        width: 180px;
+        height: 100%;
+        position: fixed;
+        .ant-menu{
+            height: 100%;
+        }
+    }
+    .content{
+        margin-left: 180px;
+        transition: all .3s;
+        &.menu-unfold{
+            margin-left: 80px;
+        }
+        .content-top{
+            display: flex;
+            align-items: center;
+            height: 50px;
+            padding: 8px 10px;
+            border-bottom: 1px solid #eee;
+            .menu-button{
+                margin-right: 10px;
+            }
+            .crumbs{
+                flex: 1 0 auto;
+            }
+            .user-info{
+                margin-right: 180px;
+                cursor: pointer;
+                li{
+                    display: inline-block;
+                    margin-left: 15px;
+                    &:hover{
+                        color: #1890ff;
+                    }
+                }
+            }
+        }
+    }
+}

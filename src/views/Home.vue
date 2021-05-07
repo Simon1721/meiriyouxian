@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <left-menu />
+    <div :class="{ content: true, 'menu-unfold': $store.state.collapsed }">
+      <nav-bar />
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import LeftMenu from '../components/Menu.vue';
+import NavBar from '../components/NavBar.vue';
 
 export default {
-  name: 'Home',
+  data() {
+    return {
+    };
+  },
   components: {
-    HelloWorld,
+    LeftMenu,
+    NavBar,
+  },
+  methods: {
   },
 };
 </script>
+<style lang="less">
+@import url("~@/assets/css/home.less");
+</style>
